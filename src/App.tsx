@@ -1,5 +1,12 @@
 import React from 'react';
+import { IncCounter } from './IncCounter';
+import { DecCounter } from './DecCounter';
 
 export function App() {
-    return <h1>hello</h1>
+    return (
+        <div>
+            <IncCounter />
+            <DecCounter />
+        </div>
+    )
 }
