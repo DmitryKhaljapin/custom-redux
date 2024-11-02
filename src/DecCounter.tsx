@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CounterContext } from './context/app.context'
 
 export function DecCounter() {
     console.log('DecCounter')
+    const {decCounter, dispatch} = useContext(CounterContext)
 
     return (
         <div>
-            <p>-12</p>
-            <button>decrement</button>
+            <p>{decCounter}</p>
+            <button onClick={() => dispatch({type: 'DECREMENT'})}>decrement</button>
         </div>
     )
 }
